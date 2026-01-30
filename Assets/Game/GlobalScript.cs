@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using PowerScript;
 using PowerTools.Quest;
 
+public delegate IEnumerator HandleGameOver();
 ///	Global Script: The home for your game specific logic
 /**		
  * - The functions in this script are used in every room in your game.
@@ -17,24 +18,26 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	
 	/// Just an example of using an enum for game state.
 	/// This can be accessed from other scripts, eg: `if ( E.Is(eProgress.DrankWater) )...`
-	public enum eProgress
-	{
-		None,
-		GotWater,
-		DrankWater,
-		WonGame
-	};
-	public eProgress m_progressExample = eProgress.None;
-	
-	/// Just an example of using a global variable that can be accessed in any room with `Globals.m_spokeToBarney`.
-	/// All variables like this in Quest Scripts are automatically saved
-	public bool m_spokeToBarney = false;
-	
-	////////////////////////////////////////////////////////////////////////////////////
-	// Global Game Functions
-	
-	/// Called when game first starts
-	public void OnGameStart()
+
+	public GameManager gameManager = GameManager.I;
+
+    /// Just an example of using a global variable that can be accessed in any room with `Globals.m_spokeToBarney`.
+    /// All variables like this in Quest Scripts are automatically saved
+
+    ////////////////////////////////////////////////////////////////////////////////////
+    // Global Game Functions
+    public IEnumerator OnVisitHouse(int houseIndex, HandleGameOver handleGameOver)
+    {
+        var result = Globals.gameManager.TryVisitHouse(houseIndex);
+        if (result == ActionResult.RunEnded)
+        {
+            handleGameOver();
+        }
+        yield return E.Break;
+    }
+
+    /// Called when game first starts
+    public void OnGameStart()
 	{
 
 	} 
