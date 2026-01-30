@@ -60,7 +60,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 540
+  orthographic size: 1920
   m_Depth: -2
   m_CullingMask:
     serializedVersion: 2
@@ -105,5 +105,4 @@ MonoBehaviour:
   m_shakeIntensityMult: 6
   m_shakeFalloffMult: 1
   m_shakeSpeed: 20
-  m_prefabPixelCam: {fileID: 1260359474244802, guid: 3d14a5e089970814486e93bba090846d,
-    type: 3}
+  m_prefabPixelCam: {fileID: 1260359474244802, guid: 3d14a5e089970814486e93bba090846d, type: 3}

@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using PowerScript;
 using PowerTools.Quest;
 
-public delegate IEnumerator HandleGameOver();
-
 
 ///	Global Script: The home for your game specific logic
 /**		
@@ -32,21 +30,23 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	
 	////////////////////////////////////////////////////////////////////////////////////
 	// Global Game Functions
-    public IEnumerator OnVisitHouse(int houseIndex, HandleGameOver handleGameOver)
+    public ActionResult OnVisitHouse(int houseIndex)
     {
         var result = Globals.gameManager.TryVisitHouse(houseIndex);
 
-        if (result == ActionResult.RunEnded)
+        if (result == ActionResult.Success)
         {
-            handleGameOver();
-		}
-		else
-		{
 			C.Player.ClearInventory();
-			C.Main.AddInventory(Globals.gameManager.CurrentMask.Description+"Mask");
+			C.Player.AddInventory(Globals.gameManager.CurrentMask.Description+"Mask");
+			Debug.Log("Player collected mask: " + Globals.gameManager.CurrentMask.Description);
 		}
 
-        yield return E.Break;
+		return result;
+    }
+
+	public void OnNewGame()
+	{
+        C.Player.AddInventory(Globals.gameManager.CurrentMask.Description + "Mask");
     }
 
     /// Called when game first starts

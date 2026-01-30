@@ -57,7 +57,7 @@ MonoBehaviour:
     m_clickable: 1
     m_visible: 1
     m_inventory: []
-    m_walkSpeed: {x: 50, y: 50}
+    m_walkSpeed: {x: 200, y: 200}
     m_moveable: 1
     m_solid: 0
     m_solidSize: {x: 20, y: 4}

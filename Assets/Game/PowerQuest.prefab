@@ -58,8 +58,8 @@ MonoBehaviour:
     m_max: 1920
     m_hasMax: 0
     m_hasValue: 0
-  m_snapToPixel: 0
-  m_pixelCamEnabled: 0
+  m_snapToPixel: 1
+  m_pixelCamEnabled: 1
   m_defaultPixelsPerUnit: 1
   m_speechStyle: 0
   m_speechPortraitLocation: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
   m_inventorySprites:
   - {fileID: 21300000, guid: 2c329d19165d3e74b82fe8cf7389bca3, type: 3}
   - {fileID: 21300000, guid: 1ced576084bbc9a40831bc55cb5014f3, type: 3}
+  - {fileID: 21300000, guid: c985a09da6637974694c814a06171c82, type: 3}
   m_guiAnimations:
   - {fileID: 0}
   - {fileID: 0}

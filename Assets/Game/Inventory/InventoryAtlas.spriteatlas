@@ -51,9 +51,11 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: 1ced576084bbc9a40831bc55cb5014f3, type: 3}
   - {fileID: 21300000, guid: 2c329d19165d3e74b82fe8cf7389bca3, type: 3}
+  - {fileID: 21300000, guid: c985a09da6637974694c814a06171c82, type: 3}
   m_PackedSpriteNamesToIndex:
   - VampireMask
   - GhostMask
+  - ZombieMask
   m_RenderDataMap: {}
   m_Tag: InventoryAtlas
   m_IsVariant: 0

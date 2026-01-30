@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_data:
-    m_description: CurrentMask
-    m_animGui: CurrentMask
-    m_animCursor: CurrentMask
-    m_animCursorInactive: CurrentMask
+    m_description: VampireMask
+    m_animGui: VampireMask
+    m_animCursor: VampireMask
+    m_animCursorInactive: VampireMask
     m_stack: 0
     m_scriptName: VampireMask
     m_scriptClass: InventoryVampireMask

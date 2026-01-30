@@ -13,40 +13,48 @@ public class RoomLevel1 : RoomScript<RoomLevel1>
     IEnumerator OnEnterRoomAfterFade()
 	{
 		Globals.gameManager.StartRun(NumOfHouses,NumOfMasks,RunDurationSeconds);
+		Globals.OnNewGame();
         yield return E.Break;
 	}
-	IEnumerator HandleGameOver() {
-        // Handle game over logic here
+
+	IEnumerator HandleHouseInteract(int houseIndex)
+	{
+		yield return C.WalkToClicked();
+		var result = Globals.OnVisitHouse(houseIndex);
+		if(result == ActionResult.AlreadyVisited)
+		{
+            yield return C.Display("Game Over");
+			Debug.Log("Game Over - Already Visited");
+        }
+		else if(result == ActionResult.IllegalMove)
+		{
+			yield return C.Display("You cannot visit the same house twice in a row!");
+			Debug.Log("Illegal Move - Same House");
+        }
         yield return E.Break;
     }
 
-	IEnumerator OnInteractHotspotHouse1( IHotspot hotspot )
+    IEnumerator OnInteractPropHouse1( IProp prop )
 	{
-		Globals.OnVisitHouse(0, HandleGameOver);
-        yield return E.Break;
+        yield return E.WaitFor(() => HandleHouseInteract(0));
+    }
+
+	IEnumerator OnInteractPropHouse2( IProp prop )
+	{
+        yield return E.WaitFor(() => HandleHouseInteract(1));
+    }
+
+	IEnumerator OnInteractPropHouse3( IProp prop )
+	{
+		yield return E.WaitFor(()=> HandleHouseInteract(2) );
+		
+		yield return E.Break;
 	}
 
-	IEnumerator OnInteractHotspotHouse2( IHotspot hotspot )
+	IEnumerator OnInteractPropHouse4( IProp prop )
 	{
-        Globals.OnVisitHouse(1, HandleGameOver);
-        yield return E.Break;
-	}
-
-	IEnumerator OnInteractHotspotHouse3( IHotspot hotspot )
-	{
-        Globals.OnVisitHouse(2, HandleGameOver);
-        yield return E.Break;
-	}
-
-	IEnumerator OnInteractHotspotHouse4( IHotspot hotspot )
-	{
-        Globals.OnVisitHouse(3, HandleGameOver);
-        yield return E.Break;
-	}
-
-	IEnumerator OnInteractPropHouse1( IProp prop )
-	{
-        Globals.OnVisitHouse(0, HandleGameOver);
-        yield return E.Break;
+		yield return E.WaitFor(()=> HandleHouseInteract(3) );
+		
+		yield return E.Break;
 	}
 }
