@@ -43,4 +43,10 @@ public class RoomLevel1 : RoomScript<RoomLevel1>
         Globals.OnVisitHouse(3, HandleGameOver);
         yield return E.Break;
 	}
+
+	IEnumerator OnInteractPropHouse1( IProp prop )
+	{
+        Globals.OnVisitHouse(0, HandleGameOver);
+        yield return E.Break;
+	}
 }

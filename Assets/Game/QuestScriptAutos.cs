@@ -13,12 +13,16 @@ namespace PowerScript
 	public static partial class C
 	{
 		// Access to specific characters (Auto-generated)
+		public static ICharacter Main           { get { return PowerQuest.Get.GetCharacter("Main"); } }
 		// #CHARS# - Do not edit this line, it's used by the system to insert characters
 	}
 
 	public static partial class I
 	{		
 		// Access to specific Inventory (Auto-generated)
+		public static IInventory VampireMask    { get { return PowerQuest.Get.GetInventory("VampireMask"); } }
+		public static IInventory GhostMask      { get { return PowerQuest.Get.GetInventory("GhostMask"); } }
+		public static IInventory ZombieMask     { get { return PowerQuest.Get.GetInventory("ZombieMask"); } }
 		// #INVENTORY# - Do not edit this line, it's used by the system to insert rooms for easy access
 	}
 

@@ -5,6 +5,8 @@ using PowerScript;
 using PowerTools.Quest;
 
 public delegate IEnumerator HandleGameOver();
+
+
 ///	Global Script: The home for your game specific logic
 /**		
  * - The functions in this script are used in every room in your game.
@@ -18,29 +20,40 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	
 	/// Just an example of using an enum for game state.
 	/// This can be accessed from other scripts, eg: `if ( E.Is(eProgress.DrankWater) )...`
-
+	
 	public GameManager gameManager = GameManager.I;
-
-    /// Just an example of using a global variable that can be accessed in any room with `Globals.m_spokeToBarney`.
-    /// All variables like this in Quest Scripts are automatically saved
-
-    ////////////////////////////////////////////////////////////////////////////////////
-    // Global Game Functions
+	
+	public string[] masks = new string[]
+	{
+	"Vampire",
+	"Ghost",
+	"Zombie",
+	};
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	// Global Game Functions
     public IEnumerator OnVisitHouse(int houseIndex, HandleGameOver handleGameOver)
     {
         var result = Globals.gameManager.TryVisitHouse(houseIndex);
+
         if (result == ActionResult.RunEnded)
         {
             handleGameOver();
-        }
+		}
+		else
+		{
+			C.Player.ClearInventory();
+			C.Main.AddInventory(Globals.gameManager.CurrentMask.Description+"Mask");
+		}
+
         yield return E.Break;
     }
 
     /// Called when game first starts
     public void OnGameStart()
 	{
-
-	} 
+		gameManager.ConfigureMasks(masks);
+    } 
 
 	/// Called after restoring a game. Use this if you need to update any references based on saved data.
 	public void OnPostRestore(int version)
