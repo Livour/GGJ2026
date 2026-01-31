@@ -10,11 +10,11 @@ public class RoomLevel1 : RoomScript<RoomLevel1>
 	public readonly int NumOfMasks = 3;
 	public readonly int NumOfHouses = 4;
 	public readonly int RunDurationSeconds = 120; //5;
-	
+
     IEnumerator OnEnterRoomAfterFade()
 	{
 		HandleNewGame();
-        yield return E.Break;
+		yield return E.Break;
 	}
 
 	void HandleGameOverPrompt()
