@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_data:
-    m_description: Novel4
-    m_cursor: 
+    m_description: Click to skip
+    m_cursor: Candy2
     m_visible: 1
     m_clickable: 1
     m_animation: Novel4
@@ -167,10 +167,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -60, y: -60}
-      - {x: -60, y: 60}
-      - {x: 60, y: 60}
-      - {x: 60, y: -60}
+    - - {x: -990, y: 545}
+      - {x: -990, y: -545}
+      - {x: 990, y: -545}
+      - {x: 990, y: 545}
 --- !u!95 &8434357250622141589
 Animator:
   serializedVersion: 5
@@ -377,8 +377,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_data:
-    m_description: Novel1
-    m_cursor: 
+    m_description: Click to skip
+    m_cursor: Candy2
     m_visible: 1
     m_clickable: 1
     m_animation: Novel1
@@ -416,10 +416,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -60, y: -60}
-      - {x: -60, y: 60}
-      - {x: 60, y: 60}
-      - {x: 60, y: -60}
+    - - {x: -990, y: 545}
+      - {x: -990, y: -545}
+      - {x: 990, y: -545}
+      - {x: 990, y: 545}
 --- !u!95 &2682242801506116383
 Animator:
   serializedVersion: 5
@@ -553,8 +553,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_data:
-    m_description: Novel3
-    m_cursor: 
+    m_description: Click to skip
+    m_cursor: Candy2
     m_visible: 1
     m_clickable: 1
     m_animation: Novel3
@@ -592,10 +592,18 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -60, y: -60}
-      - {x: -60, y: 60}
-      - {x: 60, y: 60}
-      - {x: 60, y: -60}
+    - - {x: -990, y: -545}
+      - {x: -990, y: 545}
+      - {x: 990, y: 545}
+      - {x: 990, y: -545}
+    - - {x: 1192.4274, y: -59.427715}
+      - {x: 1190.5717, y: -57.572285}
+      - {x: 1190.5717, y: -54.947998}
+      - {x: 1192.4274, y: -53.09257}
+      - {x: 1195.0514, y: -53.09257}
+      - {x: 1196.9069, y: -54.947998}
+      - {x: 1196.9069, y: -57.572285}
+      - {x: 1195.0514, y: -59.427715}
 --- !u!95 &6243408235020340457
 Animator:
   serializedVersion: 5
@@ -729,8 +737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_data:
-    m_description: Novel2
-    m_cursor: 
+    m_description: Click to skip
+    m_cursor: Candy2
     m_visible: 1
     m_clickable: 1
     m_animation: Novel2
@@ -768,10 +776,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -60, y: -60}
-      - {x: -60, y: 60}
-      - {x: 60, y: 60}
-      - {x: 60, y: -60}
+    - - {x: -990, y: 545}
+      - {x: -990, y: -545}
+      - {x: 990, y: -545}
+      - {x: 990, y: 545}
 --- !u!95 &5597123654949376054
 Animator:
   serializedVersion: 5

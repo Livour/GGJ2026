@@ -4,11 +4,7 @@ using PowerTools.Quest;
 using PowerScript;
 using static GlobalScript;
 
-public class GuiInventoryBar : GuiScript<GuiInventoryBar>
+public class GuiDisplayBox : GuiScript<GuiDisplayBox>
 {
 
-
-	void OnShow()
-	{
-	}
 }

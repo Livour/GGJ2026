@@ -50,3 +50,4 @@ MonoBehaviour:
   m_defaultTextSource: 0
   m_lipSyncExtendedShapes: X
   m_strings: []
+  m_voVolTweaksFile: {fileID: 0}

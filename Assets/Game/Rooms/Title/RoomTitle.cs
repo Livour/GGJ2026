@@ -10,7 +10,7 @@ public class RoomTitle : RoomScript<RoomTitle>
 	{
 		
 		// Hide the inventory in the title scene
-		G.InventoryBar.Hide();
+		G.LevelTopGui.Hide();
 		
 		// Later we could start some music here
 		//SystemAudio.PlayMusic("MusicSlowStrings", 1);
@@ -49,7 +49,7 @@ public class RoomTitle : RoomScript<RoomTitle>
 	public IEnumerator OnInteractPropNew( Prop prop )
 	{		
 		// Turn on the inventory and info bar now that we're starting a game
-		G.InventoryBar.Show();
+		G.LevelTopGui.Show();
 		
 		// Move the player to the room
 		E.ChangeRoomBG(R.Lore);

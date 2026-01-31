@@ -32,4 +32,16 @@ public class RoomLore : RoomScript<RoomLore>
         prop.Disable();
         yield return E.Break;
     }
+
+	IEnumerator OnLookAtPropNovel3( IProp prop )
+	{
+
+		yield return E.Break;
+	}
+
+	IEnumerator OnUseInvPropNovel3( IProp prop, IInventory item )
+	{
+
+		yield return E.Break;
+	}
 }
