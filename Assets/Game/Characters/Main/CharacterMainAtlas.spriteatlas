@@ -36,8 +36,26 @@ SpriteAtlas:
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: -5449705343158756742, guid: 976e2dc323cc4b2459674dc98c352ee2, type: 3}
+  - {fileID: 5929723125640510014, guid: 976e2dc323cc4b2459674dc98c352ee2, type: 3}
+  - {fileID: 2689914667885385034, guid: 976e2dc323cc4b2459674dc98c352ee2, type: 3}
+  - {fileID: 5000357177598636123, guid: 976e2dc323cc4b2459674dc98c352ee2, type: 3}
+  - {fileID: 1405271876697864504, guid: 976e2dc323cc4b2459674dc98c352ee2, type: 3}
+  - {fileID: 6560373844653290415, guid: 976e2dc323cc4b2459674dc98c352ee2, type: 3}
+  - {fileID: 7332546209166720047, guid: 976e2dc323cc4b2459674dc98c352ee2, type: 3}
+  - {fileID: 5450985995678864937, guid: 976e2dc323cc4b2459674dc98c352ee2, type: 3}
+  - {fileID: -4046176753564830589, guid: 976e2dc323cc4b2459674dc98c352ee2, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - unnamed_95_8
+  - unnamed_95_7
+  - unnamed_95_6
+  - unnamed_95_5
+  - unnamed_95_4
+  - unnamed_95_3
+  - unnamed_95_2
+  - unnamed_95_1
+  - unnamed_95_0
   m_RenderDataMap: {}
   m_Tag: CharacterMainAtlas
   m_IsVariant: 0

@@ -49,10 +49,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_data:
-    m_description: Main
+    m_description: Timmy
     m_cursor: 
-    m_room: 
-    m_position: {x: 0, y: 0}
+    m_room: Level1
+    m_position: {x: 0, y: -900}
     m_faceDirection: 2
     m_clickable: 0
     m_visible: 1
@@ -87,7 +87,8 @@ MonoBehaviour:
   m_clickableColliders: []
   m_turnAnims: []
   m_transitionAnims: []
-  m_animations: []
+  m_animations:
+  - {fileID: 7400000, guid: acdb010fedf6631419700931d8607be9, type: 2}
 --- !u!60 &5024679963752330746
 PolygonCollider2D:
   m_ObjectHideFlags: 0

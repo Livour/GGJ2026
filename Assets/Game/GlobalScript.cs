@@ -67,7 +67,11 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	/// Blocking script called whenever you enter a room, before fading in. Non-blocking functions only
 	public void OnEnterRoom()
 	{
-	}
+        if (!Audio.IsPlaying("MainTrack"))
+        {
+            Audio.PlayMusic("MainTrack", 1);
+        }
+    }
 
 	/// Blocking script called whenever you enter a room, after fade in is complete
 	public IEnumerator OnEnterRoomAfterFade()
