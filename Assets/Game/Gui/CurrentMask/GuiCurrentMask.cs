@@ -6,8 +6,8 @@ using static GlobalScript;
 
 public class GuiCurrentMask : GuiScript<GuiCurrentMask>
 {
-
-
+	
+	
 	void Update()
 	{
 		if (Globals.currentMask == null)
@@ -15,6 +15,12 @@ public class GuiCurrentMask : GuiScript<GuiCurrentMask>
 			return;
 		}
 		else
-			Image("CurrentMask").Anim = Globals.currentMask;
+		{
+			if(Globals.gameManager.ConsumeNewMask())
+			{
+                Image("CurrentMask").Instance.GetComponentInChildren<ParticleSystem>().Play();
+            }
+            Image("CurrentMask").Anim = Globals.currentMask;
+        }
 	}
 }
