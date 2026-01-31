@@ -103,10 +103,13 @@ MonoBehaviour:
   m_cameraPrefab: {fileID: 11462848, guid: b254fcd8f583c324ba3da9904a492986, type: 3}
   m_roomPrefabs:
   - {fileID: 114788632828080210, guid: 908a928d57ccea1418803714fc2b24b8, type: 3}
+  - {fileID: 5886283813761316055, guid: 723052777c636004aab636fbb8e4237d, type: 3}
   - {fileID: 601207551438490393, guid: 4748fb5e07ac29a4cbf952fb31c0084e, type: 3}
   m_characterPrefabs:
   - {fileID: 5424198491115636469, guid: bdfe1132fbcafbb47bacc5e8228590f3, type: 3}
+  - {fileID: 8190497900189836059, guid: 33f5ff0b3dd303f4d9199b118f6daf56, type: 3}
   m_guiPrefabs:
+  - {fileID: 8745981788808392038, guid: 7565d98c2294e7741aaf23cec53f6de7, type: 3}
   - {fileID: 114997530584156344, guid: 411a5d13109ce024888cfebc375721e4, type: 3}
   - {fileID: 8056484958200454590, guid: 008d06288a0a6bf40a1f91be9220b969, type: 3}
   - {fileID: 3440285403923831220, guid: e4d641910d987554f936e3e385631a31, type: 3}

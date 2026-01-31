@@ -277,13 +277,7 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 		else
 		{
 			// This bit of logic cycles between three options. The '% 3' makes it cycle between 3 options.
-			int option = E.Occurrence("unhandledInteract") % 3;
-			if ( option == 0 )
-				yield return C.Display("You can't use that");
-			else if ( option == 1 )
-				yield return C.Display("That doesn't work");
-			else if ( option == 2 )
-				yield return C.Display("Nothing happened");
+			yield return E.Break;
 		}
 	}
 
