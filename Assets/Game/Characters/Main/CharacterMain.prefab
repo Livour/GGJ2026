@@ -87,7 +87,8 @@ MonoBehaviour:
   m_clickableColliders: []
   m_turnAnims: []
   m_transitionAnims: []
-  m_animations: []
+  m_animations:
+  - {fileID: 7400000, guid: acdb010fedf6631419700931d8607be9, type: 2}
 --- !u!60 &5024679963752330746
 PolygonCollider2D:
   m_ObjectHideFlags: 0
