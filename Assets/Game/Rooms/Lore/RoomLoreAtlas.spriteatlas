@@ -49,14 +49,22 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 3fa5ad20962bc1d4eba29ca7d02ecb99, type: 3}
   - {fileID: 21300000, guid: ad67a154e8fb380458076f4e3aa93b32, type: 3}
   - {fileID: 21300000, guid: 85282a9433a9dd74f80d301cae71926f, type: 3}
   - {fileID: 21300000, guid: 111cfcc47228de44a9b119b2634375fe, type: 3}
+  - {fileID: 21300000, guid: fbfe9b7688b71384caefa3929e8d7b25, type: 3}
+  - {fileID: 21300000, guid: 9e5981a7e7bf92745aae9690637b1e16, type: 3}
   - {fileID: 21300000, guid: 58d7b63c12f6a0f4280ed58144bf3f6e, type: 3}
+  - {fileID: 21300000, guid: c3b0b6ac0a0ba414682a201856d47f93, type: 3}
   m_PackedSpriteNamesToIndex:
-  - Novel4
-  - Novel2
   - Novel3
+  - Novel4Old
+  - Novel2Old
+  - Novel3Old
+  - Novel2
+  - Novel4
+  - Novel1Old
   - Novel1
   m_RenderDataMap: {}
   m_Tag: RoomLoreAtlas

@@ -19,6 +19,7 @@ public class RoomLevel1 : RoomScript<RoomLevel1>
 
 	void HandleGameOverPrompt()
 	{
+        Audio.Play("gameover");
         GuiPrompt.Script.Show("Game Over, Start new game?", "Yes", "Return to title", () =>
         {
             HandleNewGame();
@@ -57,6 +58,10 @@ public class RoomLevel1 : RoomScript<RoomLevel1>
 			yield return C.Display("You cannot visit the same house twice in a row!");
 			Debug.Log("Illegal Move - Same House");
         }
+		else if(result == ActionResult.Success)
+		{
+			Audio.Play("ping");
+		}
         yield return E.Break;
     }
 

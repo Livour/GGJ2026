@@ -49,12 +49,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_data:
-    m_description: Main
+    m_description: Timmy
     m_cursor: 
-    m_room: 
-    m_position: {x: 0, y: 0}
+    m_room: Level1
+    m_position: {x: 0, y: -900}
     m_faceDirection: 2
-    m_clickable: 1
+    m_clickable: 0
     m_visible: 1
     m_inventory: []
     m_walkSpeed: {x: 200, y: 200}

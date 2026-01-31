@@ -11,7 +11,6 @@ public class RoomTitle : RoomScript<RoomTitle>
 		
 		// Hide the inventory in the title scene
 		G.InventoryBar.Hide();
-		
 		// Later we could start some music here
 		//SystemAudio.PlayMusic("MusicSlowStrings", 1);
 	}
