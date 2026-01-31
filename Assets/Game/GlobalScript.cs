@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using PowerScript;
 using PowerTools.Quest;
 
+
 ///	Global Script: The home for your game specific logic
 /**		
  * - The functions in this script are used in every room in your game.
@@ -17,27 +18,43 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	
 	/// Just an example of using an enum for game state.
 	/// This can be accessed from other scripts, eg: `if ( E.Is(eProgress.DrankWater) )...`
-	public enum eProgress
-	{
-		None,
-		GotWater,
-		DrankWater,
-		WonGame
-	};
-	public eProgress m_progressExample = eProgress.None;
 	
-	/// Just an example of using a global variable that can be accessed in any room with `Globals.m_spokeToBarney`.
-	/// All variables like this in Quest Scripts are automatically saved
-	public bool m_spokeToBarney = false;
+	public GameManager gameManager = GameManager.I;
+	
+	public string[] masks = new string[]
+	{
+	"Vampire",
+	"Ghost",
+	"Zombie",
+	};
 	
 	////////////////////////////////////////////////////////////////////////////////////
 	// Global Game Functions
-	
-	/// Called when game first starts
-	public void OnGameStart()
-	{
+    public ActionResult OnVisitHouse(int houseIndex)
+    {
+        var result = Globals.gameManager.TryVisitHouse(houseIndex);
 
-	} 
+        if (result == ActionResult.Success)
+        {
+			C.Player.ClearInventory();
+			C.Player.AddInventory(Globals.gameManager.CurrentMask.Description+"Mask");
+			Debug.Log("Player collected mask: " + Globals.gameManager.CurrentMask.Description);
+		}
+
+		return result;
+    }
+
+	public void OnNewGame()
+	{
+		C.Player.ClearInventory();
+        C.Player.AddInventory(Globals.gameManager.CurrentMask.Description + "Mask");
+    }
+
+    /// Called when game first starts
+    public void OnGameStart()
+	{
+		gameManager.ConfigureMasks(masks);
+    } 
 
 	/// Called after restoring a game. Use this if you need to update any references based on saved data.
 	public void OnPostRestore(int version)
