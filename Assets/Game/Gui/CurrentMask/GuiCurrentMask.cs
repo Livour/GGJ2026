@@ -18,9 +18,9 @@ public class GuiCurrentMask : GuiScript<GuiCurrentMask>
 		{
 			if(Globals.gameManager.ConsumeNewMask())
 			{
-                Image("CurrentMask").Instance.GetComponentInChildren<ParticleSystem>().Play();
+                Image("Mask").Instance.GetComponentInChildren<ParticleSystem>().Play();
             }
-            Image("CurrentMask").Anim = Globals.currentMask;
+            Image("Mask").Anim = Globals.currentMask;
         }
 	}
 }
