@@ -36,12 +36,12 @@ namespace PowerScript
 		public static IGui DisplayBox    { get { return PowerQuest.Get.GetGui("DisplayBox"); } }
 		public static IGui Prompt         { get { return PowerQuest.Get.GetGui("Prompt"); } }
 		public static IGui Toolbar          { get { return PowerQuest.Get.GetGui("Toolbar"); } }
-		public static IGui InventoryBar   { get { return PowerQuest.Get.GetGui("InventoryBar"); } }
 		public static IGui Options        { get { return PowerQuest.Get.GetGui("Options"); } }
 		public static IGui Save           { get { return PowerQuest.Get.GetGui("Save"); } }
 		public static IGui Timer          { get { return PowerQuest.Get.GetGui("Timer"); } }
 		public static IGui Score          { get { return PowerQuest.Get.GetGui("Score"); } }
 		public static IGui ClickToContinue { get { return PowerQuest.Get.GetGui("ClickToContinue"); } }
+		public static IGui LevelTopGui    { get { return PowerQuest.Get.GetGui("LevelTopGui"); } }
 		// #GUI# - Do not edit this line, it's used by the system to insert rooms for easy access
 	}
 

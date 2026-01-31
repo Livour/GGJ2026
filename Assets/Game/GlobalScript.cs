@@ -21,12 +21,12 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	/// This can be accessed from other scripts, eg: `if ( E.Is(eProgress.DrankWater) )...`
 	
 	public GameManager gameManager = GameManager.I;
-	
+	public string currentMask = null;
 	public string[] masks = new string[]
 	{
-	"Vampire",
-	"Ghost",
-	"Zombie",
+	"VampireMask",
+	"GhostMask",
+	"ZombieMask",
 	};
 	
 	////////////////////////////////////////////////////////////////////////////////////
@@ -37,9 +37,10 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 
         if (result == ActionResult.Success)
         {
-			C.Player.ClearInventory();
-			C.Player.AddInventory(Globals.gameManager.CurrentMask.Description+"Mask");
-			Debug.Log("Player collected mask: " + Globals.gameManager.CurrentMask.Description);
+			//C.Player.ClearInventory();
+			//C.Player.AddInventory(Globals.gameManager.CurrentMask.Description);
+			currentMask = Globals.gameManager.CurrentMask.Description;
+            Debug.Log("Player collected mask: " + Globals.gameManager.CurrentMask.Description);
 		}
 
 		return result;
@@ -47,15 +48,16 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 
 	public void OnNewGame()
 	{
-		C.Player.ClearInventory();
-        C.Player.AddInventory(Globals.gameManager.CurrentMask.Description + "Mask");
+		//C.Player.ClearInventory();
+		//      C.Player.AddInventory(Globals.gameManager.CurrentMask.Description);
+		currentMask = Globals.gameManager.CurrentMask.Description;
     }
 
     /// Called when game first starts
     public void OnGameStart()
 	{
 		gameManager.ConfigureMasks(masks);
-    } 
+ } 
 
 	/// Called after restoring a game. Use this if you need to update any references based on saved data.
 	public void OnPostRestore(int version)

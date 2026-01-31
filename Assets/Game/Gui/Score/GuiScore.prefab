@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3681757951514861115}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2809.5442, y: 1726.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1885.7183, y: 1484.1564, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 2547028125549161488}
   - {fileID: 402912396078857789}
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_vertical: 1
   m_horizontal: 3
-  m_offset: {x: -600, y: -200}
+  m_offset: {x: -1500, y: -440}
   m_offsetRatio: {x: 0, y: 0}
   m_snapToPixel: 0
   m_camera: {fileID: 0}
