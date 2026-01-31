@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_data:
     m_description: Lore
-    m_playerVisible: 1
+    m_playerVisible: 0
     m_verticalResolution: 0
     m_activeWalkableArea: 0
     m_bounds:

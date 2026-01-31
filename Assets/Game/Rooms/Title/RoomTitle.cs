@@ -6,16 +6,6 @@ using static GlobalScript;
 
 public class RoomTitle : RoomScript<RoomTitle>
 {
-	public void OnEnterRoom()
-	{
-		
-		// Hide the inventory in the title scene
-		G.LevelTopGui.Hide();
-		
-		// Later we could start some music here
-		//SystemAudio.PlayMusic("MusicSlowStrings", 1);
-	}
-
 	public IEnumerator OnEnterRoomAfterFade()
 	{
 		
