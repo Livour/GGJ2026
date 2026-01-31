@@ -8,7 +8,7 @@ public class RoomLore : RoomScript<RoomLore>
 {
 
 
-	IEnumerator OnInteractPropNovel1( IProp prop )
+    IEnumerator OnInteractPropNovel1( IProp prop )
 	{
 		prop.Disable();
 		yield return E.Break;

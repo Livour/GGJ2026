@@ -10,7 +10,12 @@ public class RoomTitle : RoomScript<RoomTitle>
 	{
 		
 		// Hide the inventory in the title scene
+		G.CurrentMask.Hide();
 		G.LevelTopGui.Hide();
+		G.ClickToContinue.Hide();
+		G.Timer.Hide();
+		G.Score.Hide();
+		C.Plr.Disable();
 		
 		// Later we could start some music here
 		//SystemAudio.PlayMusic("MusicSlowStrings", 1);

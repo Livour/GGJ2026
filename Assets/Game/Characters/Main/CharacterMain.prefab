@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4811943668377750978}
   - component: {fileID: 441680775154387148}
   - component: {fileID: 5919556964200504489}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CharacterMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_cursor: 
     m_room: Level1
     m_position: {x: 0, y: -900}
-    m_faceDirection: 2
+    m_faceDirection: 1
     m_clickable: 0
     m_visible: 1
     m_inventory: []
@@ -79,7 +79,7 @@ MonoBehaviour:
     m_footstepSound: 
     m_speechVolume: 1
     m_useSpriteAsHotspot: 0
-    m_baseline: 0
+    m_baseline: -83
     m_walkToPoint: {x: 0, y: 0}
     m_lookAtPoint: {x: 0, y: 0}
     m_scriptName: Main
@@ -88,6 +88,7 @@ MonoBehaviour:
   m_turnAnims: []
   m_transitionAnims: []
   m_animations:
+  - {fileID: 7400000, guid: 1e07828da87b5564ca24d640acacc4fc, type: 2}
   - {fileID: 7400000, guid: c6e542b4d06439443a12c559081143b1, type: 2}
 --- !u!60 &5024679963752330746
 PolygonCollider2D:
@@ -105,10 +106,10 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 341.33334, y: 186.33333}
+    newSize: {x: 341.33334, y: 186.33333}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -157,16 +158,16 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_SortingOrder: 830
+  m_Sprite: {fileID: -5449705343158756742, guid: 976e2dc323cc4b2459674dc98c352ee2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 341.33334, y: 186.33333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4811943668377750978

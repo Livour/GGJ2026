@@ -42,8 +42,9 @@ namespace PowerScript
 		public static IGui Score          { get { return PowerQuest.Get.GetGui("Score"); } }
 		public static IGui ClickToContinue { get { return PowerQuest.Get.GetGui("ClickToContinue"); } }
 		public static IGui LevelTopGui    { get { return PowerQuest.Get.GetGui("LevelTopGui"); } }
-		// #GUI# - Do not edit this line, it's used by the system to insert rooms for easy access
-	}
+        public static IGui CurrentMask { get { return PowerQuest.Get.GetGui("CurrentMask"); } }
+        // #GUI# - Do not edit this line, it's used by the system to insert rooms for easy access
+    }
 
 	public static partial class R
 	{

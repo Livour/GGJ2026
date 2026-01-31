@@ -57,6 +57,7 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
     public void OnGameStart()
 	{
 		gameManager.ConfigureMasks(masks);
+		
  } 
 
 	/// Called after restoring a game. Use this if you need to update any references based on saved data.
@@ -67,11 +68,12 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	/// Blocking script called whenever you enter a room, before fading in. Non-blocking functions only
 	public void OnEnterRoom()
 	{
-        if (!Audio.IsPlaying("MainTrack"))
-        {
-            Audio.PlayMusic("MainTrack", 1);
-        }
-    }
+		if (!Audio.IsPlaying("MainTrack"))
+		{
+			Audio.PlayMusic("MainTrack", 1);
+		}
+		
+ }
 
 	/// Blocking script called whenever you enter a room, after fade in is complete
 	public IEnumerator OnEnterRoomAfterFade()
@@ -253,11 +255,11 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 					E.ProcessClick(eQuestVerb.Use);
 				}
 			}
-			else  // They've clicked empty space
-			{
-				// Left click empty space, so walk
-				E.ProcessClick( eQuestVerb.Walk );
-			}
+			//else  // They've clicked empty space
+			//{
+			//	// Left click empty space, so walk
+			//	E.ProcessClick( eQuestVerb.Walk );
+			//}
 		}
 		else if ( rightClick )
 		{
