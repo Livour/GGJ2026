@@ -24,15 +24,16 @@ public class RoomLevel1 : RoomScript<RoomLevel1>
 
 	void HandleGameOverPrompt()
 	{
-        Audio.Play("gameover");
-        GuiPrompt.Script.Show("Game Over, Start new game?", "Yes", "Return to title", () =>
-        {
-            HandleNewGame();
-        }, () =>
-        {
-            E.ChangeRoomBG(R.Title);
-        });
-    }
+		Audio.Play("gameover");
+		GuiPrompt.Script.Show("Game Over, Start new game?", "Yes", "Return to title", () =>
+		{
+			HandleNewGame();
+		}, () =>
+		{
+			E.Restart(R.Title);
+		});
+		
+ }
 
     void Update()
 	{

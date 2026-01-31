@@ -102,7 +102,7 @@ MonoBehaviour:
   m_cursorPrefab: {fileID: 11435822, guid: 3799efca464e21f4b9247c6beea65b92, type: 3}
   m_cameraPrefab: {fileID: 11462848, guid: b254fcd8f583c324ba3da9904a492986, type: 3}
   m_roomPrefabs:
-  - {fileID: 114788632828080210, guid: 908a928d57ccea1418803714fc2b24b8, type: 3}
+  - {fileID: 5978230689603056452, guid: d071fca63c5130e4db98fe84541491e4, type: 3}
   - {fileID: 5886283813761316055, guid: 723052777c636004aab636fbb8e4237d, type: 3}
   - {fileID: 601207551438490393, guid: 4748fb5e07ac29a4cbf952fb31c0084e, type: 3}
   m_characterPrefabs:

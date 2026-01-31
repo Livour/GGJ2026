@@ -15,6 +15,8 @@ public class GuiCurrentMask : GuiScript<GuiCurrentMask>
 			return;
 		}
 		else
-			Image("Mask").Anim = Globals.currentMask;
+		{
+            Image("Mask").Anim = Globals.currentMask;
+        }
 	}
 }

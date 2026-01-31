@@ -49,9 +49,9 @@ namespace PowerScript
 	public static partial class R
 	{
 		// Access to specific room (Auto-generated)
-		public static IRoom Title          { get { return PowerQuest.Get.GetRoom("Title"); } }
 		public static IRoom Level1          { get { return PowerQuest.Get.GetRoom("Level1"); } }
 		public static IRoom Lore           { get { return PowerQuest.Get.GetRoom("Lore"); } }
+		public static IRoom Title    { get { return PowerQuest.Get.GetRoom("Title"); } }
 		// #ROOM# - Do not edit this line, it's used by the system to insert rooms for easy access
 	}
 
