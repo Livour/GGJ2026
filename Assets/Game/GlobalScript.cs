@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using PowerScript;
 using PowerTools.Quest;
+using UnityEditor.Experimental.GraphView;
 
 
 ///	Global Script: The home for your game specific logic
@@ -88,7 +89,10 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	/// Called every frame. Non-blocking functions only
 	public void Update()
 	{
-		// Add anything that should happen every frame here.
+		if (gameManager != null && this.gameManager.IsRunning)
+		{
+			this.gameManager.Tick(Time.deltaTime);
+		}
 	}	
 
 	/// Called every frame, even when paused. Non-blocking functions only
@@ -273,13 +277,7 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 		else
 		{
 			// This bit of logic cycles between three options. The '% 3' makes it cycle between 3 options.
-			int option = E.Occurrence("unhandledInteract") % 3;
-			if ( option == 0 )
-				yield return C.Display("You can't use that");
-			else if ( option == 1 )
-				yield return C.Display("That doesn't work");
-			else if ( option == 2 )
-				yield return C.Display("Nothing happened");
+			yield return E.Break;
 		}
 	}
 

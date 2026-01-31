@@ -14,6 +14,7 @@ namespace PowerScript
 	{
 		// Access to specific characters (Auto-generated)
 		public static ICharacter Main           { get { return PowerQuest.Get.GetCharacter("Main"); } }
+		public static ICharacter Narrator       { get { return PowerQuest.Get.GetCharacter("Narrator"); } }
 		// #CHARS# - Do not edit this line, it's used by the system to insert characters
 	}
 
@@ -38,6 +39,9 @@ namespace PowerScript
 		public static IGui InventoryBar   { get { return PowerQuest.Get.GetGui("InventoryBar"); } }
 		public static IGui Options        { get { return PowerQuest.Get.GetGui("Options"); } }
 		public static IGui Save           { get { return PowerQuest.Get.GetGui("Save"); } }
+		public static IGui Timer          { get { return PowerQuest.Get.GetGui("Timer"); } }
+		public static IGui Score          { get { return PowerQuest.Get.GetGui("Score"); } }
+		public static IGui ClickToContinue { get { return PowerQuest.Get.GetGui("ClickToContinue"); } }
 		// #GUI# - Do not edit this line, it's used by the system to insert rooms for easy access
 	}
 
@@ -46,6 +50,7 @@ namespace PowerScript
 		// Access to specific room (Auto-generated)
 		public static IRoom Title          { get { return PowerQuest.Get.GetRoom("Title"); } }
 		public static IRoom Level1          { get { return PowerQuest.Get.GetRoom("Level1"); } }
+		public static IRoom Lore           { get { return PowerQuest.Get.GetRoom("Lore"); } }
 		// #ROOM# - Do not edit this line, it's used by the system to insert rooms for easy access
 	}
 
