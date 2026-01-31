@@ -12,19 +12,31 @@ public class RoomLevel1 : RoomScript<RoomLevel1>
 
     IEnumerator OnEnterRoomAfterFade()
 	{
-		Globals.gameManager.StartRun(NumOfHouses,NumOfMasks,RunDurationSeconds);
-		Globals.OnNewGame();
+		HandleNewGame();
         yield return E.Break;
 	}
-
+	
+	void HandleNewGame()
+	{
+        Globals.gameManager.StartRun(NumOfHouses, NumOfMasks, RunDurationSeconds);
+        Globals.OnNewGame();
+    }
 	IEnumerator HandleHouseInteract(int houseIndex)
 	{
 		yield return C.WalkToClicked();
 		var result = Globals.OnVisitHouse(houseIndex);
-		if(result == ActionResult.AlreadyVisited)
+		Debug.Log("res: "+result);
+        if (result == ActionResult.AlreadyVisited)
 		{
-            yield return C.Display("Game Over");
-			Debug.Log("Game Over - Already Visited");
+			GuiPrompt.Script.Show("Game Over, Start new game?", "Yes", "Return to title", () =>
+			{
+				HandleNewGame();
+			}, () =>
+			{
+				E.ChangeRoomBG(R.Title);
+			});
+
+            Debug.Log("Game Over - Already Visited");
         }
 		else if(result == ActionResult.IllegalMove)
 		{

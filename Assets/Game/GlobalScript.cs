@@ -46,6 +46,7 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 
 	public void OnNewGame()
 	{
+		C.Player.ClearInventory();
         C.Player.AddInventory(Globals.gameManager.CurrentMask.Description + "Mask");
     }
 

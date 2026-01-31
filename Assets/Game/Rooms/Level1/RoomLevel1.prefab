@@ -268,7 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_data:
     m_description: Green House
-    m_cursor: 
+    m_cursor: Use
     m_visible: 1
     m_clickable: 1
     m_animation: House4
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_data:
     m_description: Brown House
-    m_cursor: 
+    m_cursor: Use
     m_visible: 1
     m_clickable: 1
     m_animation: House2
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_data:
     m_description: Red House
-    m_cursor: 
+    m_cursor: Use
     m_visible: 1
     m_clickable: 1
     m_animation: House3

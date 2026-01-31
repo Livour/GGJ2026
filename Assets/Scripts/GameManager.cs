@@ -144,7 +144,7 @@ public sealed class GameManager
     {
         IsOver = true;
         IsRunning = false;
-        return ActionResult.RunEnded;
+        return ActionResult.AlreadyVisited;
     }
 
     private void EndRunInternal()
