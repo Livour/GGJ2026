@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using PowerScript;
 using PowerTools.Quest;
+using UnityEditor.Experimental.GraphView;
 
 
 ///	Global Script: The home for your game specific logic
@@ -88,7 +89,10 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	/// Called every frame. Non-blocking functions only
 	public void Update()
 	{
-		// Add anything that should happen every frame here.
+		if (gameManager != null && this.gameManager.IsRunning)
+		{
+			this.gameManager.Tick(Time.deltaTime);
+		}
 	}	
 
 	/// Called every frame, even when paused. Non-blocking functions only
