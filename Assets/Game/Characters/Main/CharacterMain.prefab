@@ -57,7 +57,7 @@ MonoBehaviour:
     m_clickable: 0
     m_visible: 1
     m_inventory: []
-    m_walkSpeed: {x: 200, y: 200}
+    m_walkSpeed: {x: 1500, y: 1500}
     m_moveable: 1
     m_solid: 0
     m_solidSize: {x: 20, y: 4}
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_turnAnims: []
   m_transitionAnims: []
   m_animations:
-  - {fileID: 7400000, guid: acdb010fedf6631419700931d8607be9, type: 2}
+  - {fileID: 7400000, guid: c6e542b4d06439443a12c559081143b1, type: 2}
 --- !u!60 &5024679963752330746
 PolygonCollider2D:
   m_ObjectHideFlags: 0
