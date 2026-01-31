@@ -24,6 +24,8 @@ public sealed class GameManager
     public int CurrentMaskId { get; private set; } = -1;
     public Mask CurrentMask => (CurrentMaskId >= 0 && CurrentMaskId < _masks.Count) ? _masks[CurrentMaskId] : null;
 
+    private bool isNewMask = false;
+
     private GameManager() { }
 
     // Call once on boot
@@ -37,6 +39,17 @@ public sealed class GameManager
             _masks.Add(new Mask(id, name));
             id++;
         }
+    }
+
+    public bool ConsumeNewMask()
+    {
+        var val = isNewMask;
+        if (isNewMask)
+        {
+            isNewMask = false;
+        }
+        return val;
+
     }
 
     // Call when starting a new run
@@ -138,6 +151,7 @@ public sealed class GameManager
     {
         int pick = UnityEngine.Random.Range(0, _availableMaskIds.Count);
         CurrentMaskId = _availableMaskIds[pick];
+        isNewMask = true;
     }
 
     private ActionResult GameOverInternal()
