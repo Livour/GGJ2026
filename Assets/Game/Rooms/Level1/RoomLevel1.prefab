@@ -32,7 +32,7 @@ Transform:
   m_LocalScale: {x: 1.0548183, y: 1.0605829, z: 1}
   m_Children: []
   m_Father: {fileID: 5064749685942160009}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5599392724484542035
 MonoBehaviour:
@@ -54,7 +54,7 @@ MonoBehaviour:
     m_animation: Background
     m_alpha: 1
     m_position: {x: 0, y: 0}
-    m_baseline: 1811
+    m_baseline: 3202
     m_baselineFixed: 0
     m_walkToPoint: {x: 0, y: 0}
     m_lookAtPoint: {x: 0, y: 0}
@@ -134,7 +134,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -18211
+  m_SortingOrder: -32121
   m_Sprite: {fileID: 21300000, guid: a024a9213b7e2ac4487dd32fcb113ea7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -146,7 +146,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2440120811589555331
+--- !u!1 &2195938580474125730
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,37 +154,58 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1183633267604607992}
-  - component: {fileID: 4763520750133397870}
-  - component: {fileID: 4004730145740773952}
+  - component: {fileID: 8109366539026302867}
+  - component: {fileID: 4243997870141451808}
+  - component: {fileID: 7452404181609150463}
   m_Layer: 0
-  m_Name: WalkableArea
+  m_Name: RegionScaleUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1183633267604607992
+--- !u!4 &8109366539026302867
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2440120811589555331}
+  m_GameObject: {fileID: 2195938580474125730}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5064749685942160009}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &4763520750133397870
+--- !u!114 &4243997870141451808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2195938580474125730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20008c577fbd68147a04948177cd9c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_data:
+    m_enabled: 1
+    m_walkable: 1
+    m_playerOnly: 0
+    m_tint: {r: 1, g: 1, b: 1, a: 0}
+    m_fadeDistance: 0
+    m_scaleTop: 1.7
+    m_scaleBottom: 1.7
+    m_scriptName: ScaleUp
+--- !u!60 &7452404181609150463
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2440120811589555331}
+  m_GameObject: {fileID: 2195938580474125730}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -203,22 +224,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -3426.2493, y: -1890.4531}
-      - {x: -3420.8682, y: -250.92639}
-      - {x: 3430.3674, y: -304.73077}
-      - {x: 3435.1772, y: -1908.3121}
---- !u!114 &4004730145740773952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2440120811589555331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 727988640b9224246aff8ffe86dcaedd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+    - - {x: -3371.665, y: -1055.0181}
+      - {x: -3364.07, y: -767.80994}
+      - {x: 3399.02, y: -766.37524}
+      - {x: 3394.4521, y: -1062.614}
 --- !u!1 &3850713341176738903
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,12 +256,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3850713341176738903}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2282, y: -299, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2216.14, y: -299, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 5064749685942160009}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4087270547757153636
 MonoBehaviour:
@@ -276,7 +285,7 @@ MonoBehaviour:
     m_position: {x: 0, y: 0}
     m_baseline: 1368
     m_baselineFixed: 0
-    m_walkToPoint: {x: 9, y: -451}
+    m_walkToPoint: {x: -4, y: -503}
     m_lookAtPoint: {x: -21, y: -45}
     m_scriptName: House4
   m_parallaxDepth: 0
@@ -605,11 +614,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4847131453831025402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1019, y: -273, z: 0}
+  m_LocalPosition: {x: 858.5, y: -299, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 5064749685942160009}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4483500180063550935
 MonoBehaviour:
@@ -631,9 +640,9 @@ MonoBehaviour:
     m_animation: House2
     m_alpha: 1
     m_position: {x: 0, y: 0}
-    m_baseline: 1517
+    m_baseline: 1281
     m_baselineFixed: 0
-    m_walkToPoint: {x: 7, y: -496}
+    m_walkToPoint: {x: 3, y: -499}
     m_lookAtPoint: {x: -23, y: -130}
     m_scriptName: House2
   m_parallaxDepth: 0
@@ -861,7 +870,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -12440
+  m_SortingOrder: -9820
   m_Sprite: {fileID: 21300000, guid: 7aa187d486d236740b4edb27c9152dcf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -902,11 +911,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5422550134715942087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2694, y: -299, z: 20}
+  m_LocalPosition: {x: 2398.7, y: -299, z: 20}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 5064749685942160009}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8638586617999230277
 MonoBehaviour:
@@ -930,7 +939,7 @@ MonoBehaviour:
     m_position: {x: 0, y: 0}
     m_baseline: 1308
     m_baselineFixed: 0
-    m_walkToPoint: {x: 17, y: -503}
+    m_walkToPoint: {x: 4, y: -495}
     m_lookAtPoint: {x: 11.19696, y: -102.670105}
     m_scriptName: House1
   m_parallaxDepth: 0
@@ -1239,12 +1248,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7978896115448814716}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -580, y: -227, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -662, y: -227, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 5064749685942160009}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6825154868129551462
 MonoBehaviour:
@@ -1268,7 +1277,7 @@ MonoBehaviour:
     m_position: {x: 0, y: 0}
     m_baseline: 1292
     m_baselineFixed: 0
-    m_walkToPoint: {x: -186, y: -558}
+    m_walkToPoint: {x: -182, y: -578}
     m_lookAtPoint: {x: -144, y: -198}
     m_scriptName: House3
   m_parallaxDepth: 0
@@ -1578,12 +1587,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1183633267604607992}
   - {fileID: 3529771898526865781}
   - {fileID: 5763838703399811889}
   - {fileID: 3905915564192658299}
   - {fileID: 5624945966490313320}
   - {fileID: 4644901882687733566}
+  - {fileID: 8109366539026302867}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1622,9 +1631,9 @@ MonoBehaviour:
   - {fileID: 4483500180063550935}
   - {fileID: 6825154868129551462}
   - {fileID: 4087270547757153636}
-  m_regionComponents: []
-  m_walkableAreas:
-  - {fileID: 4004730145740773952}
+  m_regionComponents:
+  - {fileID: 4243997870141451808}
+  m_walkableAreas: []
   m_animations: []
   m_sprites:
   - {fileID: 21300000, guid: a024a9213b7e2ac4487dd32fcb113ea7, type: 3}

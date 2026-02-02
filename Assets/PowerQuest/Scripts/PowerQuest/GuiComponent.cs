@@ -154,7 +154,7 @@ public partial class Gui : IQuestClickable, IQuestScriptable, IGui
 	public string Cursor { get { return m_cursor; } set { m_cursor = value; } }
 
 	public GuiControl GetControl(string name) 
-	{ 
+	{
 		GuiControl result = QuestUtils.FindScriptableMono(m_controls, name);
 		if ( result == null )
 			Debug.LogError("Gui Control '"+name+"' doesn't exist in " +ScriptName);

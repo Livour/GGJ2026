@@ -46,6 +46,15 @@ SpriteAtlas:
   - {fileID: 7332546209166720047, guid: 976e2dc323cc4b2459674dc98c352ee2, type: 3}
   - {fileID: 5450985995678864937, guid: 976e2dc323cc4b2459674dc98c352ee2, type: 3}
   - {fileID: -4046176753564830589, guid: 976e2dc323cc4b2459674dc98c352ee2, type: 3}
+  - {fileID: 538147324002771137, guid: 4ba1fdfcb5bb51345b0d5eb868d23fd0, type: 3}
+  - {fileID: 2991445075066503974, guid: 4ba1fdfcb5bb51345b0d5eb868d23fd0, type: 3}
+  - {fileID: 1082366431781023769, guid: 4ba1fdfcb5bb51345b0d5eb868d23fd0, type: 3}
+  - {fileID: 7899783167773940239, guid: 4ba1fdfcb5bb51345b0d5eb868d23fd0, type: 3}
+  - {fileID: 7960805600596360450, guid: 4ba1fdfcb5bb51345b0d5eb868d23fd0, type: 3}
+  - {fileID: -6778007219319334997, guid: 4ba1fdfcb5bb51345b0d5eb868d23fd0, type: 3}
+  - {fileID: 5895540913150188443, guid: 4ba1fdfcb5bb51345b0d5eb868d23fd0, type: 3}
+  - {fileID: -4512585659602318485, guid: 4ba1fdfcb5bb51345b0d5eb868d23fd0, type: 3}
+  - {fileID: 5888536608778651055, guid: 4ba1fdfcb5bb51345b0d5eb868d23fd0, type: 3}
   m_PackedSpriteNamesToIndex:
   - unnamed_95_8
   - unnamed_95_7
@@ -56,6 +65,15 @@ SpriteAtlas:
   - unnamed_95_2
   - unnamed_95_1
   - unnamed_95_0
+  - Left_8
+  - Left_5
+  - Left_4
+  - Left_7
+  - Left_6
+  - Left_1
+  - Left_0
+  - Left_3
+  - Left_2
   m_RenderDataMap: {}
   m_Tag: CharacterMainAtlas
   m_IsVariant: 0

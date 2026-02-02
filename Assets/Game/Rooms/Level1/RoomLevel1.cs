@@ -13,21 +13,27 @@ public class RoomLevel1 : RoomScript<RoomLevel1>
 
     IEnumerator OnEnterRoomAfterFade()
 	{
+		G.Timer.Show();
+		G.Score.Show();
+		G.CurrentMask.Show();
+		G.LevelTopGui.Show();
+		C.Plr.Enable();
 		HandleNewGame();
 		yield return E.Break;
 	}
 
 	void HandleGameOverPrompt()
 	{
-        Audio.Play("gameover");
-        GuiPrompt.Script.Show("Game Over, Start new game?", "Yes", "Return to title", () =>
-        {
-            HandleNewGame();
-        }, () =>
-        {
-            E.ChangeRoomBG(R.Title);
-        });
-    }
+		Audio.Play("gameover");
+		GuiPrompt.Script.Show("Game Over, Start new game?", "Yes", "Return to title", () =>
+		{
+			HandleNewGame();
+		}, () =>
+		{
+			E.Restart(R.Title);
+		});
+		
+ }
 
     void Update()
 	{
